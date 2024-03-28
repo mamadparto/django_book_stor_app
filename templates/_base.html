@@ -6,6 +6,12 @@
 </head>
 <body>
 
+<nav>
+    {% if user.is_authenticated %}
+        <form action="{% url 'logout' %}" method="post">Logout</form>
+    {% endif %}
+</nav>
+
 {% block content %}   {% endblock %}
 
 </body>
