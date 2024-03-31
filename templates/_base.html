@@ -8,6 +8,35 @@
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">mohammad partonia</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                <a class="nav-link" href="">Blog</a>
+                <a class="nav-link" href="">New Post</a>
+            </div>
+        </div>
+        <div class="mx-2 text-white">
+
+            <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+                {% if user.is_authenticated %}
+                    welcome {{ user.username }} | <button class="btn btn-success" >logout</button>
+                {% else %}
+                    <a class="text-light" href="{% url 'login' %}">login</a> |
+                    <a class="text-light" href="{% url 'signup' %}">signup</a>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</nav>
+
 <div class="container">
     {% block content %}   {% endblock %}
 
