@@ -9,4 +9,5 @@
     <p>{{ book.content }}</p>
     <p>{{ book.author}}</p>
     <h4>{{ book.price }}</h4>
+    <a href="{% url 'book_edit' book.id %}"> <button type="submit" class="btn btn-success">edit</button> </a>
 {% endblock %}
