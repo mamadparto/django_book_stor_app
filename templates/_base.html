@@ -13,25 +13,16 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    {% block styles%}
+    {% block styles %}
 
     {% endblock %}
 
     <title>{% block page_title %}  {% endblock %}</title>
 </head>
 
-<style>
-    body {
-        text-align: left;
-
-    }
-
-    p {
-        direction: ltr;
-    }
-</style>
 
 <body>
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
@@ -74,6 +65,73 @@
     {% endif %}
 </nav>
 
+
+<footer class="bg-body-tertiary text-center">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a
+                    data-mdb-ripple-init
+                    class="btn text-white btn-floating m-1"
+                    style="background-color: #3b5998;"
+                    href="https://www.facebook.com/profile.php?id=100077751006513&mibextid=ZbWKwL"
+                    role="button"
+            ><i class="fab fa-facebook-f"><img src="{% static 'icons/facebook.svg' %}" alt=""></i
+            ></a>
+
+            <!-- Twitter -->
+            <a
+                    data-mdb-ripple-init
+                    class="btn text-white btn-floating m-1"
+                    style="background-color: #55acee;"
+                    href="https://x.com/Hamaa2003?s=09"
+                    role="button"
+            ><i class="fab fa-twitter"><img src="{% static 'icons/twitter-x.svg' %}" alt=""></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+                    data-mdb-ripple-init
+                    class="btn text-white btn-floating m-1"
+                    style="background-color: #ac2bac;"
+                    href="https://www.instagram.com/"
+                    role="button"
+            ><i class="bi bi-instagram"><img src="{% static 'icons/instagram.svg' %}" alt=""></i
+            ></a>
+
+            <!-- Linkedin -->
+            <a
+                    data-mdb-ripple-init
+                    class="btn text-white btn-floating m-1"
+                    style="background-color: #0082ca;"
+                    href="#"
+                    role="button"
+            ><i class="fab fa-linkedin-in"><img src="{% static 'icons/linkedin.svg' %}" alt=""></i
+            ></a>
+            <!-- Github -->
+            <a
+                    data-mdb-ripple-init
+                    class="btn text-white btn-floating m-1"
+                    style="background-color: #333333;"
+                    href="https://github.com/mamadparto"
+                    role="button"
+            ><i class="fab fa-github"><img src="{% static 'icons/github.svg' %}" alt=""></i
+            ></a>
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <p class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    <p>©
+        <script>document.write(new Date().getFullYear());</script>
+        Made by: <a class="text-body" href="https://github.com/mamadparto">Mohammad Partonia</a></p>
+    </div>
+    <!-- Copyright -->
+</footer>
 
 <!-- Optional JavaScript; choose one of the two! -->
 
