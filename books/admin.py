@@ -3,7 +3,7 @@ from .models import Book, comment
 
 
 class commentAdmin(admin.ModelAdmin):
-    list_display = ('user', 'book', 'text', 'datetime_created')
+    list_display = ('user', 'book', 'datetime_created')
 
 
 admin.site.register(Book)
