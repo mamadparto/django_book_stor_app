@@ -27,13 +27,16 @@
                             <h5 class="small my-1" style="text-align: left"><span
                                     class="text-muted">writer: </span> {{ book.author }}</h5>
                             {#                            <h5 class="small my-1"><span class="text-muted">مترجم: </span>الهام خرسندی</h5>#}
-                            <h5 class="small my-1" style="text-align: left"><span class="text-muted">publishers: </span>
+                            <h5 class="small my-1" style="text-align: left"><span
+                                    class="text-muted">publishers: {{ book.user.username }} </span>
                             </h5>
-
+                                {% if book.user == user %}
                             <h6 style="text-align: left"><a class="text-decoration-none"
                                                             href="{% url 'book_delete' book.id %}">delete</a>
                                 <span>|</span> <a
                                         class="text-decoration-none" href="{% url 'book_edit' book.id %}">edit</a></h6>
+
+                                {% endif %}
 
 
                         </div>
